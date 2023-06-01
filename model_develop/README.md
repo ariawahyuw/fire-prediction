@@ -8,3 +8,5 @@ I trained the model using different machine learning methods:
 - Support Vector Machine with RBF kernel
 
 And the result shown that ANN model is the best model for fire prediction by using recall and F2 metrics. The model then converted into [TF-Lite](../model_develop/model.tflite) and the scaler are saved as [scaler_min.txt](../model_develop/scaler_min.txt) and [scaler_scale.txt](../model_develop/scaler_scale.txt)
+
+The trained model were used to predict the outcome (fire/not fire) for [observational dataset](../model_develop/test - 14052023.csv)
