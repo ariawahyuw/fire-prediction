@@ -13,4 +13,4 @@ Requirements:
 - tflite-runtime>=2.11.0
 - model.tflite (can be found at: [../model_develop/model.tflite](../model_develop/model.tflite))
 - scaler_min.txt (can be found at: [../model_develop/scaler_min.txt](../model_develop/scaler_min.txt))
-- scaler_scale.txt (can be found at: [../model_develop/scaler_max.txt](../model_develop/scaler_max.txt))
+- scaler_scale.txt (can be found at: [../model_develop/scaler_scale.txt](../model_develop/scaler_scale.txt))
