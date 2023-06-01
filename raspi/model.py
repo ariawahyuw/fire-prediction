@@ -8,16 +8,13 @@ interpreter = tflite.Interpreter(model_path="../model_develop/model.tflite")
 scale_ = np.loadtxt("../model_develop/scaler_scale.txt")
 min_ = np.loadtxt("../model_develop/scaler_min.txt")
 
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
-interpreter.allocate_tensors()
 if abs(float(data[0]) - 0.) < 1e-2:
     print(-1)
 else:
     soilHumid = np.interp(float(data[4]), [0, 80], [65.9, 0.7])
-    x_test = np.array([data[0], data[1], data[3], data[2], soilHumid], dtyp>    x_test *= scale_
+    x_test = np.array([data[0], data[1], data[3], data[2], soilHumid], dtype=np.float32)
+    x_test *= scale_
     x_test += min_
-
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
     interpreter.allocate_tensors()
