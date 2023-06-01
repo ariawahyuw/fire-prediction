@@ -4,8 +4,9 @@ import sys
 
 x = sys.argv[1]
 data = str.split(x, ',')
-interpreter = tflite.Interpreter(model_path="/home/pi/model-ml/model.tflite>scale_ = np.loadtxt("/home/pi/model-ml/scaler_scale.txt")
-min_ = np.loadtxt("/home/pi/model-ml/scaler_min.txt")
+interpreter = tflite.Interpreter(model_path="../model_develop/model.tflite")
+scale_ = np.loadtxt("../model_develop/scaler_scale.txt")
+min_ = np.loadtxt("../model_develop/scaler_min.txt")
 
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
